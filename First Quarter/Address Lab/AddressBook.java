@@ -309,7 +309,21 @@ class AddressBook extends JFrame implements ActionListener
 
 			// FINISH ME
 			// add this person object to our list
-			list.add(person);
+
+      boolean alreadyExists = false;
+
+      for(Person adude : list)
+      {
+        if(adude.equals(person))
+        {
+          alreadyExists = true;
+        }
+      }
+
+      if(!alreadyExists)
+      {
+        list.add(person);
+      }
 
       System.out.println("Added : " + person);
 
@@ -408,8 +422,20 @@ class AddressBook extends JFrame implements ActionListener
 			displayPersonOnScreen();
 
 		}
+    else if(source == lastButton || source == lastItem)
+    {
 
-		else if (source == previousButton)
+			// copy all input fields to our ArrayList
+			updateArrayListFromScreen();
+
+			// now move to the next Person
+			pos = list.size() - 1;
+
+			// display the new Person on the screen
+			displayPersonOnScreen();
+    }
+
+		else if (source == previousButton || source == previousItem)
 		{
 			if (list.size()==0)
 				return;
@@ -465,7 +491,7 @@ class AddressBook extends JFrame implements ActionListener
 
       for(int i = 0; i < list.size(); i++)
       {
-        if(s.equals(list.get(i)))
+        if(s.equals(list.get(i).getName()))
         {
           pos = i;
           break;
@@ -483,6 +509,28 @@ class AddressBook extends JFrame implements ActionListener
 			displayPersonOnScreen();
 
 		}
+    else if(source == idItem)
+    {
+      updateArrayListFromScreen();
+
+      String s = JOptionPane.showInputDialog(this, "Enter search ID");
+
+      if(s == null)
+      {
+        return;
+      }
+
+      for(int i = 0; i < list.size(); i++)
+      {
+        if(s.equals(list.get(i).getId()))
+        {
+          pos = i;
+          break;
+        }
+      }
+
+      displayPersonOnScreen();
+    }
     else if(source == saveItem)
     {
       saveFile();
@@ -535,7 +583,7 @@ class AddressBook extends JFrame implements ActionListener
 		{
 			// read in each data element from the file
 
-      String[] yoov = scan.nextLine().split(" ");
+      String[] yoov = scan.nextLine().split("=");
 
       list.add(new Person(yoov[0],yoov[1],yoov[2],yoov[3]));
 
@@ -590,7 +638,8 @@ class AddressBook extends JFrame implements ActionListener
       		{
       			// FINISH ME
       			// write each Person object to the file
-        		bw.write(list.get(j).getName() + " " + list.get(j).getId() + " " + list.get(j).getAddress() + " " + list.get(j).getPhone());
+            //System.out.println(list.get(j).getName() + " " + list.get(j).getId() + " " + list.get(j).getAddress() + " " + list.get(j).getPhone());
+        		bw.write(list.get(j).getName() + "=" + list.get(j).getId() + "=" + list.get(j).getAddress() + "=" + list.get(j).getPhone());
         		bw.newLine();
         		// write all the other fields to the file
       		}
