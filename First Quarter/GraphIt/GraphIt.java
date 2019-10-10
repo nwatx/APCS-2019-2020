@@ -455,9 +455,14 @@ public class GraphIt extends JFrame implements  ActionListener
 		    /* gMemory.drawRect(middleX, middleY, middleX + pixelsPerUnit, middleY + markHeight);
             gMemory.drawRect(middleX, middleY, middleX - pixelsPerUnit, middleY + markHeight); */
 
-		    for(int i = 0; i < getWidth(); i += pixelsPerUnit)
+		    for(int i = middleX; i < getWidth(); i += pixelsPerUnit)
             {
-                gMemory.drawRect(0 + i, middleY - markHeight/2, 1, markHeight);
+                gMemory.drawRect(i, middleY - markHeight/2, 1, markHeight);
+            }
+
+            for(int i = middleX; i > 0; i -= pixelsPerUnit)
+            {
+                gMemory.drawRect(i, middleY - markHeight/2, 1, markHeight);
             }
 
 
@@ -481,12 +486,16 @@ public class GraphIt extends JFrame implements  ActionListener
 
             // FINISH ME
             // draw the y axis
-            gMemory.drawRect(middleX, 0, middleX, getHeight());
+            gMemory.drawRect(middleX, 0, 1, getHeight());
 
 
             // show hash marks
             // center point of (0,0) is (middleX,middleY)
-            for(int i = 0; i < getHeight(); i += pixelsPerUnit)
+            for(int i = middleY; i < getHeight(); i += pixelsPerUnit)
+            {
+                gMemory.drawRect(middleX - markWidth/2, i, markWidth, 1);
+            }
+            for(int i = middleY; i > 0; i -= pixelsPerUnit)
             {
                 gMemory.drawRect(middleX - markWidth/2, i, markWidth, 1);
             }
