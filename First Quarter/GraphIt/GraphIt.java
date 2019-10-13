@@ -430,10 +430,8 @@ public class GraphIt extends JFrame implements  ActionListener
             g2.drawImage(back, null, 0, 0);
         }
 
-
         // draw the x axis
-        public void drawXAxis(Graphics gMemory, String label,
-                              int markHeight, int pixelsPerUnit)
+        public void drawXAxis(Graphics gMemory, String label, int markHeight, int pixelsPerUnit)
         {
             // middleX and middleY is the origin of the graph
             int middleX = getWidth()/2;
