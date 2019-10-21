@@ -8,6 +8,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -15,6 +22,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/First Quarter" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -25,6 +33,18 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/First Quarter" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Second Quarter" />
+      <recent name="$PROJECT_DIR$/src/First Quarter/LocationAwareness" />
+      <recent name="$PROJECT_DIR$/src/First Quarter" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/Second Quarter/Variables" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -38,7 +58,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HelloWorld">
+    <configuration name="Awareness" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LocationAwareness.Awareness" />
+      <module name="APCS-2019-2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LocationAwareness.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HelloWorld" />
+      <module name="APCS-2019-2020" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Integral" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Integral" />
       <module name="APCS-2019-2020" />
@@ -46,8 +86,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LocationAwareness" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LocationAwareness.LocationAwareness" />
+      <module name="APCS-2019-2020" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LocationAwareness.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Variables" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Variables" />
+      <module name="APCS-2019-2020" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HelloWorld" />
+        <item itemvalue="Application.LocationAwareness" />
+        <item itemvalue="Application.Awareness" />
+        <item itemvalue="Application.Variables" />
         <item itemvalue="Application.Integral" />
       </list>
     </recent_temporary>
@@ -64,6 +128,13 @@
       <updated>1570987707741</updated>
       <workItem from="1570987709174" duration="37000" />
       <workItem from="1570987848727" duration="1914000" />
+      <workItem from="1571162569391" duration="317000" />
+      <workItem from="1571163393875" duration="111000" />
+      <workItem from="1571264142219" duration="490000" />
+      <workItem from="1571332129915" duration="4423000" />
+      <workItem from="1571345743221" duration="4277000" />
+      <workItem from="1571538539384" duration="196000" />
+      <workItem from="1571581514765" duration="1683000" />
     </task>
     <servers />
   </component>
