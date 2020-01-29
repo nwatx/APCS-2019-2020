@@ -39,9 +39,93 @@ public class LinkedList // implements LinkedListInterface
 		return copy;
 	}
 
-	public LinkedNode peek()
+	public Student peek()
 	{
-		return first;
+		return first.getStudent();
+	}
+
+	public Student getFirst()
+	{
+		return first.getStudent();
+	}
+
+	public void addFirst(Student student)
+	{
+		first = new LinkedNode(null, student, first);
+	}
+
+	public void addLast(Student student)
+	{
+		last = new LinkedNode(last, student, null);
+	}
+
+	public Student remove()
+	{
+		Student output = first.getStudent();
+		first = first.getNext();
+		return output;
+	}
+
+	public void remove(int a)
+	{
+		LinkedNode b = first;
+		for(int i = 0; i < a; i++)
+		{
+			b = b.getNext();
+		}
+
+		b.getPrevious().setNext(b.getNext());
+
+
+	}
+
+	public void push(Student a)
+	{
+		last = new LinkedNode(last, a, null);
+		last.getPrevious().setNext(last);
+	}
+
+	public Student deque()
+	{
+		/* LinkedNode a = first;
+
+		while(a != null)
+		{
+			 a = a.getPrevious();
+		}
+
+		return a.getStudent(); */
+
+		return first.getStudent();
+	}
+
+	public void enque(Student a)
+	{
+		push(a);
+	}
+
+	public LinkedNode removeLast()
+	{
+		LinkedNode output = last;
+		last = last.getPrevious();
+		//last.setNext(null);
+		//System.out.println("YEA EYA EAYEYA " + last);
+		return output;
+	}
+
+	public LinkedNode pop()
+	{
+		return removeLast();
+	}
+
+	public void removeFirst()
+	{
+		first = first.getNext();
+	}
+
+	public LinkedNode getLast()
+	{
+		return last;
 	}
 
 	public void clear()
@@ -82,6 +166,7 @@ public class LinkedList // implements LinkedListInterface
 		// call a method (it's private)
 
     last.setNext(node);
+
 
 		// FINISH ME
 		// point node.previous to where last is pointing
